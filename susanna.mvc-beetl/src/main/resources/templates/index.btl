@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Hello，Beetl</title>
+		<link href="/css/ztree.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<p>${name}</p>
+	</body>
+</html>

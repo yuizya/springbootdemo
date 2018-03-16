@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>userinfo</title>
+		<link href="/css/ztree.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<p>用户id：${user.id}<p/>
+		<p>用户名：${user.username}<p/>
+	</body>
+</html>
