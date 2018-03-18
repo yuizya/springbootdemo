@@ -1,0 +1,5 @@
+@ #ajax userTable: {
+	@for(user in userList!){
+	<tr><td>${user.id}</td><td>${user.username}</td></tr>
+	@}
+@}

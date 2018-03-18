@@ -1,0 +1,20 @@
+<html>
+<head>
+<script src="/script/jquery-1.10.2.min.js"></script>
+<script>
+	$(function(){
+		$("#table-container").load("/test/testAjax");
+	})
+</script>
+</head>
+<body>
+这是一个beetl-ajax测试页面
+<div>
+	<table>
+		<tr><td width=100>id</td><td width=100>姓名</td></tr>
+		<tbody id="table-container"></tbody>
+	</table>
+</div>
+<button>按钮</button>
+</body>
+</html>

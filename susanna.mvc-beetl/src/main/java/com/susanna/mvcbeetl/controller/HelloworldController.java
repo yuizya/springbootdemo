@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.susanna.mvcbeetl.entity.User;
 import com.susanna.mvcbeetl.service.UserService;
@@ -23,6 +24,19 @@ public class HelloworldController {
 		model.addAttribute("name", "hello,world");
 		return "/index.btl";
 	}
+	@RequestMapping("/beetlajax")
+	public String beetlajax() {
+		return "/beetlajax.btl";
+	}
+	
+	@RequestMapping("/testAjax")
+	public ModelAndView testAjaxRefresh(ModelAndView modelAndView) {
+		List<User> userList = userService.allUser();
+		modelAndView.addObject("userList", userList);
+		modelAndView.setViewName("/table.btl");
+		return modelAndView;
+	}
+	
 	@RequestMapping("/all.json")
 	public @ResponseBody List<User> allUser(){
 		return userService.allUser();

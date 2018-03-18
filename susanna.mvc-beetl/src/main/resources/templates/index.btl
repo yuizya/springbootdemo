@@ -6,6 +6,24 @@
 		<link href="/css/ztree.css" rel="stylesheet"/>
 	</head>
 	<body>
+		<h1>主页</h1>
 		<p>${name}</p>
+		<div id="ajaxRefresh">
+		@ #ajax userTable:{
+			@for(user in userList!){
+					<div>${user.id}&nbsp;&nbsp;${user.name}</div>
+			@}
+		
+		@}
+		</div>
+		<button class="btn">加载ajax</button>
+		
+		
+		<script src="/script/jquery-1.10.2.min.js"></script>
+		<script>
+			$(".btn").click(function(){
+				$("#ajaxRefresh").load("/test/testAjax");
+			})
+		</script>
 	</body>
 </html>
